@@ -17,11 +17,12 @@ With storage space doubling every year, a 2^31 byte maximum file size predictabl
 Since negative lengths are illegal in IFF, it's technically safe to specify use a few extreme values to introduce a variable-length length field. The remaining values can simply expand the range to nearly a full 32-bit unsigned value. (If some developers already are already treating the chunk size as an unsigned 32-bit value, this'd mostly match what they're doing.)
 
 Given chunk size n:
-    * ```n = -1``` is used as a placeholder value when writers need to back-patch it after writing the chunk's contents.
-    * ```n = -2``` indicates an 8 byte (64-bit) unsigned chunk size immediately follows, supporting chunk lengths in [0 .. 2^64) bytes.
-    * ```n = -3``` indicates a 16 byte (128-bit) unsigned chunk size immediately follows, supporting chunk lengths in [0 .. 2^128) bytes.
-    * ```n in [-15 .. -4]``` values are reserved.
-    * ```|n| in [0 .. 2^32 - 16]``` indicates n bytes of chunk data.
+
+* ```n = -1``` is used as a placeholder value when writers need to back-patch it after writing the chunk's contents.
+* ```n = -2``` indicates an 8 byte (64-bit) unsigned chunk size immediately follows, supporting chunk lengths in [0 .. 2^64) bytes.
+* ```n = -3``` indicates a 16 byte (128-bit) unsigned chunk size immediately follows, supporting chunk lengths in [0 .. 2^128) bytes.
+* ```n in [-15 .. -4]``` values are reserved.
+* ```|n| in [0 .. 2^32 - 16]``` indicates n bytes of chunk data.
 
 Writers are encouraged to use the shorter fields for backwards compatibility. Still, a one-pass writer may have to reserve a longer field just in case.
 
@@ -30,8 +31,8 @@ A reader should give up on any file whose initial chunk length is too big for it
 
 ## Alternative 2
 
-Just use new "IFF-2003" magic signatures 'FOR2', 'LIS2', 'PRO2', and 'CAT2' to indicate that those chunks and their contained chunks have unsigned 64-bit length fields. ('FOR1' is used by the BEAM file format.)
+Just use new "IFF-2003" magic signatures ```'FOR2'```, ```'LIS2'```, ```'PRO2'```, and ```'CAT2'``` to indicate that those chunks and their contained chunks have unsigned 64-bit length fields. (```'FOR1'``` is used by the BEAM file format.)
 
-IFF-2003 wouldn't need the pad byte that follows each odd-length IFF-85 chunk, and it could skip the 'LIST' and 'PROP' features as well.
+IFF-2003 wouldn't need the pad byte that follows each odd-length IFF-85 chunk, and it could skip the ```'LIST'``` and ```'PROP'``` features as well.
 
 For backwards compatibility, writers are encouraged to use IFF-85 when feasible. Of course IFF-85 readers will ignore IFF-2003 files.
