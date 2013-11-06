@@ -7,8 +7,8 @@ The "EA IFF-85" Repository
 *   IFF source code/
     A version of the Amiga C code for reading and writing IFF files.
 
-*   64-bit IFF.txt
+*   64-bit IFF.md
     Proposals for 64-bit (and larger) IFF data sizes. Not adopted.
 
-*   IFF retrospective.txt
+*   IFF retrospective.md
     Notes on the history of IFF.
