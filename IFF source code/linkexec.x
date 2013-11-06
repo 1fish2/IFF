@@ -1,0 +1,31 @@
+! @(#) linkexec.x 96/02/12 1.6
+!
+MAGIC 9
+EXPORTS 0=CreateIFFParser
+EXPORTS 1=DeleteIFFParser
+EXPORTS 2=ParseIFF
+EXPORTS 3=ReadChunk
+EXPORTS 4=WriteChunk
+EXPORTS 5=PushChunk
+EXPORTS 6=PopChunk
+EXPORTS 7=RegisterPropChunks
+EXPORTS 8=RegisterStopChunks
+EXPORTS 9=RegisterCollectionChunks
+EXPORTS 10=FindPropChunk
+EXPORTS 11=FindCollection
+EXPORTS 12=FindPropContext
+EXPORTS 13=GetCurrentContext
+EXPORTS 14=GetParentContext
+EXPORTS 15=AllocContextInfo
+EXPORTS 16=FreeContextInfo
+EXPORTS 17=FindContextInfo
+EXPORTS 18=StoreContextInfo
+EXPORTS 19=AttachContextInfo
+EXPORTS 20=InstallEntryHandler
+EXPORTS 21=InstallExitHandler
+EXPORTS 22=SeekChunk
+EXPORTS 23=GetIFFOffset
+EXPORTS 24=CreateIFFParserVA
+EXPORTS 25=RemoveContextInfo
+EXPORTS 26=ReadChunkCompressed
+EXPORTS 27=WriteChunkCompressed
