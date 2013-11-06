@@ -33,6 +33,6 @@ A reader should give up on any file whose initial chunk length is too big for it
 
 Just use new "IFF-2003" magic signatures ```'FOR2'```, ```'LIS2'```, ```'PRO2'```, and ```'CAT2'``` to indicate that those chunks and their contained chunks have unsigned 64-bit length fields. (```'FOR1'``` is used by the BEAM file format.)
 
-IFF-2003 wouldn't need the pad byte that follows each odd-length IFF-85 chunk, and it could skip the ```'LIST'``` and ```'PROP'``` features as well.
+IFF-2003 could drop the pad byte that follows each odd-length IFF-85 chunk and the ```'LIST'``` and ```'PROP'``` features, too.
 
 For backwards compatibility, writers are encouraged to use IFF-85 when feasible. Of course IFF-85 readers will ignore IFF-2003 files.
