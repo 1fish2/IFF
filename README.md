@@ -3,7 +3,9 @@ The "EA IFF-85" Repository
 
 *   IFF docs with Commodore revisions/
 
-    The original IFF docs with some revisions from Commodore Business Machines. Thankfully, CBM converted them to Word docs. Those are the *.doc files here. I've converted them to newer Word docs *.docx and from there to .pdf and .rtf formats.
+    The original IFF docs with some revisions from Commodore Business Machines, as published by Commodore.
+
+    Thankfully, Commodore converted the docs from MacWrite to Word format -- the *.doc files in this directory. I converted those to current MS Word format *.docx and from there to *.pdf and *.rtf files.
 
 *   IFF source code/
 
