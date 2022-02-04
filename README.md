@@ -25,3 +25,8 @@ The "EA IFF-85" Repository
 *   **[IFF retrospective.md](https://github.com/1fish2/IFF/blob/master/IFF%20retrospective.md)**
 
     Notes on the history of IFF.
+
+*   [IFF Standard](https://wiki.amigaos.net/wiki/IFF_Standard) docs in the **AmigaOS Documentation Wiki**
+    * [EA IFF 85 Standard](https://wiki.amigaos.net/wiki/EA_IFF_85_Standard_for_Interchange_Format_Files)
+    * [A Quick Introduction to IFF](https://wiki.amigaos.net/wiki/A_Quick_Introduction_to_IFF)
+    * **[IFF FORM and Chunk Registry](https://wiki.amigaos.net/wiki/IFF_FORM_and_Chunk_Registry)**
